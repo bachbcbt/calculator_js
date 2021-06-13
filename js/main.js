@@ -14,7 +14,11 @@ keys.addEventListener('click', event => {
   const { previousKeyType } = calculator.dataset
 
   if (type === 'number') {
-    if (displayValue === '0' || displayValue === 'Error' || previousKeyType === 'operator') {
+    if (
+      displayValue === '0' || 
+      displayValue === 'Error' || 
+      previousKeyType === 'operator' ||
+      previousKeyType === 'equal') {
       display.textContent = keyValue
     } 
     else {
